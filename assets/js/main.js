@@ -33,7 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Fechar menu ao clicar fora
+    // Fechar menu ao clicar fora (incluindo overlay)
+    navMenu.addEventListener('click', (e) => {
+      if (e.target === navMenu && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+
     document.addEventListener('click', (e) => {
       if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target) && navMenu.classList.contains('active')) {
         navMenu.classList.remove('active');
@@ -62,7 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const target = document.querySelector(href);
         if (target) {
-          const offsetTop = target.offsetTop - 80; // Ajuste para navbar fixa
+          const nav = document.querySelector('.nav');
+          const navHeight = nav ? nav.offsetHeight : 60;
+          const offsetTop = target.offsetTop - navHeight - 20; // Ajuste para navbar fixa + margem
           window.scrollTo({
             top: offsetTop,
             behavior: 'smooth'
