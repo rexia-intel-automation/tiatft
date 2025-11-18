@@ -1,0 +1,13 @@
+html {
+    --bg: #ffffff;
+    --text: #111111;
+    --primary: #0070f3;
+    --border: #dddddd;
+}
+
+html.dark {
+    --bg: #111111;
+    --text: #eeeeee;
+    --primary: #4d8dff;
+    --border: #333333;
+}
