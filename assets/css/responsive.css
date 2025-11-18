@@ -1,0 +1,56 @@
+/* /assets/css/responsive.css */
+/* Breakpoints globais */
+
+@media (max-width: 1200px) {
+  .pricing-container {
+    flex-wrap: wrap;
+    perspective: none;
+  }
+
+  .pricing-card {
+    transform: none !important;
+    opacity: 1 !important;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .pricing-card:nth-child(3) {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 1.5rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    letter-spacing: -2px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .cta-group {
+    flex-direction: column;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+  }
+
+  .stats {
+    gap: 2rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
