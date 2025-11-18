@@ -1,0 +1,110 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* CONTAINERS */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    height: 32px;
+}
+
+.dark-toggle {
+    font-size: 1.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.hero h1 {
+    font-size: 2rem;
+}
+
+/* CTA BUTTON */
+.btn-primary {
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+/* PRICING */
+.pricing {
+    margin-top: 3rem;
+}
+
+.pricing-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.plan {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.featured {
+    border-width: 2px;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    opacity: 0.7;
+}
+
+/* DESKTOP BREAKPOINT */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
