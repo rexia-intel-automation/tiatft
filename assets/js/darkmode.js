@@ -1,11 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const html = document.documentElement;
-    const toggle = document.getElementById("darkToggle");
+function applyTheme(theme) {
+    document.body.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+}
 
-    if (localStorage.theme === "dark") html.classList.add("dark");
+function toggleTheme() {
+    const currentTheme = document.body.getAttribute('data-theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(newTheme);
+}
 
-    toggle.addEventListener("click", () => {
-        html.classList.toggle("dark");
-        localStorage.theme = html.classList.contains("dark") ? "dark" : "light";
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    applyTheme(savedTheme);
 });
