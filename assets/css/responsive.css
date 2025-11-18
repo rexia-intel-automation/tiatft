@@ -28,6 +28,11 @@
    ================================================================= */
 
 @media (max-width: 1024px) {
+  /* Hero */
+  .hero {
+    padding: 7.5rem 2rem 4rem;
+  }
+
   /* Remover perspectiva 3D dos pricing cards */
   .pricing-container {
     perspective: none;
@@ -38,23 +43,9 @@
     transform: none !important;
   }
 
-  /* Ajustar hero */
-  .hero h1 {
-    font-size: 4rem;
-    letter-spacing: -3px;
-  }
-
-  .hero-subtitle {
-    font-size: 1.25rem;
-  }
-
   /* Sections */
   .section {
     padding: 6rem 2rem;
-  }
-
-  .section-title {
-    font-size: 3rem;
   }
 
   /* Orbs menores */
@@ -179,21 +170,17 @@
 
   /* Hero */
   .hero {
-    padding: 5rem 1.5rem 4rem;
-  }
-
-  .hero h1 {
-    font-size: 2.8rem;
-    letter-spacing: -2px;
-  }
-
-  .hero-subtitle {
-    font-size: 1.1rem;
+    padding: 7rem 1.5rem 4rem;
   }
 
   .hero-badge {
-    font-size: 0.85rem;
-    padding: 0.5rem 1.25rem;
+    padding: 0.55rem 1.25rem;
+    gap: 0.5rem;
+  }
+
+  .badge-icon svg {
+    width: 16px;
+    height: 16px;
   }
 
   /* Section */
@@ -213,6 +200,9 @@
   .cta-group {
     flex-direction: column;
     gap: 0.75rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .cta-primary,
@@ -324,31 +314,37 @@
 
   /* Hero */
   .hero {
-    padding: 4.5rem 1rem 3rem;
+    padding: 6rem 1rem 3rem;
     min-height: auto;
   }
 
   .hero h1 {
-    font-size: 2rem;
-    letter-spacing: -1px;
     line-height: 1.2;
+    margin-bottom: 1.25rem;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
     margin-bottom: 2rem;
+    padding: 0 0.5rem;
+    max-width: 600px;
+  }
+
+  .hero-subtitle br {
+    display: none;
   }
 
   .hero-badge {
-    font-size: 0.75rem;
-    padding: 0.4rem 1rem;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
     text-align: center;
-    max-width: 100%;
+    max-width: 95%;
+    line-height: 1.4;
   }
 
   .badge-icon svg {
     width: 14px;
     height: 14px;
+    flex-shrink: 0;
   }
 
   /* Sections */
@@ -365,6 +361,10 @@
   }
 
   /* CTA Buttons */
+  .cta-group {
+    max-width: 100%;
+  }
+
   .cta-primary,
   .cta-secondary {
     padding: 1rem 1.5rem;
@@ -512,12 +512,25 @@
    ================================================================= */
 
 @media (max-width: 375px) {
-  .hero h1 {
-    font-size: 1.75rem;
+  .hero {
+    padding: 5.5rem 0.75rem 2.5rem;
   }
 
-  .section-title {
-    font-size: 1.75rem;
+  .hero h1 {
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    padding: 0 0.25rem;
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .hero-badge {
+    max-width: 98%;
+    padding: 0.45rem 0.85rem;
+    gap: 0.4rem;
+    font-size: 0.7rem;
   }
 
   .cta-primary,

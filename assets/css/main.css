@@ -190,11 +190,12 @@ html[data-theme="dark"] .icon-moon { opacity: 1; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6rem 2rem 4rem;
+  padding: 8rem 2rem 4rem;
 }
 
 .hero-content {
   max-width: 1400px;
+  width: 100%;
   text-align: center;
   position: relative;
   z-index: 10;
@@ -204,21 +205,29 @@ html[data-theme="dark"] .icon-moon { opacity: 1; }
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   background: rgba(16, 185, 129, 0.08);
   border: 1px solid rgba(16, 185, 129, 0.2);
   border-radius: 50px;
   color: #10b981;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
   font-weight: 600;
   margin-bottom: 2rem;
   animation: fadeIn 0.8s ease;
+  max-width: 90%;
+  line-height: 1.4;
+}
+
+.hero-badge span:last-child {
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .badge-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .badge-icon svg {
@@ -228,30 +237,33 @@ html[data-theme="dark"] .icon-moon { opacity: 1; }
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw + 1rem, 6rem);
+  font-size: clamp(2.2rem, 8vw, 6rem);
   font-weight: 900;
   background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 50%, var(--accent-2) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1.5rem;
-  letter-spacing: clamp(-1px, -0.5vw, -4px);
-  line-height: 1.1;
+  letter-spacing: clamp(-1px, -0.1vw, -4px);
+  line-height: 1.15;
   animation: fadeIn 0.8s ease 0.2s both;
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(0.95rem, 3vw, 1.5rem);
   color: var(--text-secondary);
   max-width: 800px;
   margin: 0 auto 3rem;
-  line-height: 1.6;
+  line-height: 1.65;
   animation: fadeIn 0.8s ease 0.4s both;
+  word-wrap: break-word;
 }
 
 .hero-subtitle .highlight {
   color: var(--accent-2);
   font-weight: 600;
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
 .cta-group {
